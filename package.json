@@ -1,0 +1,13 @@
+{
+  "name": "tractor",
+  "version": "0.0.1",
+  "description": "Protractor demo - do's and some more do's",
+  "author": "Iryna Mykhailenko <irynn.m@gmail.com>",
+  "devDependencies": {
+    "protractor": "^4.0.3"
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/protractor/bin/webdriver-manager update",
+    "test": "npm run ./node_modules/.bin/protractor ./conf.js"
+  }
+}
