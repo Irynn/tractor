@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "Protractor demo - do's and some more do's",
   "author": "Iryna Mykhailenko <irynn.m@gmail.com>",
+  "homepage": "https://github.com/Irynn/tractor/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irynn/tractor.git"
+  },
   "devDependencies": {
     "protractor": "^4.0.3"
   },
