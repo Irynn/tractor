@@ -9,7 +9,9 @@ var BaseFragment = rekuire('BaseFragment');
 class MovieCard extends BaseFragment{
 
     constructor(element){
+        //getting browser of element works only in Protractor 4.0+
         super(element.browser_);
+        
         this.baseElement = element;
         this.titleLink = this.baseElement.$('a[title]');
         this.releaseDate = this.baseElement.$('strong');

@@ -22,7 +22,7 @@ class BasePage{
     }
 
     get pageName(){
-        browser.wait(EC.visibilityOf(browser.$(this.titleSelector)));
+        this.browser.wait(EC.visibilityOf(this.browser.$(this.titleSelector)));
         return this.browser.$$(this.titleSelector).first().getText();
     }
 }
