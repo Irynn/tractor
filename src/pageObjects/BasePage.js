@@ -13,7 +13,7 @@ class BasePage{
         this.browser = browser;
         this.titleSelector = 'h3.orange-text';
         this.header = new Header(browser);
-        this.genresPanel = new GenresPanel(browser);
+        this.genresList = new GenresPanel(browser);
     }
 
     static openHomePage(){

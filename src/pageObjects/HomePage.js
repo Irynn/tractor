@@ -5,7 +5,7 @@
 
 var BasePage = rekuire("BasePage");
 var SearchPanel = rekuire("SearchPanel");
-var MovieCard = rekuire('MovieCard');
+var MovieCardsGrid = rekuire('MovieCardsGrid');
 
 class HomePage extends BasePage {
 
@@ -13,20 +13,10 @@ class HomePage extends BasePage {
 
         super(browser);
         this.searchPanel = new SearchPanel(browser);
-
+        this.movieCardsGrid = new MovieCardsGrid(browser);
     }
 
-    get movieCards(){
-        let movieCardsArray = [];
-        this.browser.$$('movie-card').map((elem, ind) => {
-            movieCardsArray.push(new MovieCard(elem));
-        });
-        return movieCardsArray;
-    }
 
-    selectMovieCardByIndex(index){
-        this.movieCards.get(index).openDetails();
-    }
 }
 
 module.exports = HomePage;

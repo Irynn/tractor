@@ -14,6 +14,7 @@ class MovieCard extends BaseFragment{
         this.titleLink = this.baseElement.$('a[title]');
         this.releaseDate = this.baseElement.$('strong');
         this.viewDetailsLink = this.baseElement.element(by.partialLinkText("View details"));
+        this.rating = this.baseElement.$('small.label');
     }
 
     openDetails(){
@@ -27,6 +28,25 @@ class MovieCard extends BaseFragment{
     getReleaseDate(){
         return this.releaseDate.getText();
     }
+
+    getRating(){
+        return this.rating.getText().then(ratingString => parseFloat(ratingString));
+    }
 }
 
-module.exports = MovieCard;
+class MovieCardsGrid extends BaseFragment{
+
+    constructor(browser){
+        super(browser);
+        this.movieCards = this.browser.$$('movie-card');
+    }
+    getMovieCardByIndex(index){
+        return new MovieCard(this.movieCards.get(index));
+    }
+
+    openMovieCardByIndex(index){
+        this.getMovieCardByIndex(index).openDetails();
+    }
+}
+
+module.exports = MovieCardsGrid;
