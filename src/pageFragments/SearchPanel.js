@@ -6,11 +6,11 @@ var BaseFragment = rekuire('BaseFragment');
 
 class  SearchPanel extends BaseFragment{
 
-    constructor(browser){
-        super(browser);
+    constructor(){
+        super();
 
-        this.goButton = this.browser.element(by.buttonText("Go!"));
-        this.searchInput = this.browser.element(by.name("searchStr"));
+        this.goButton = element(by.buttonText("Go!"));
+        this.searchInput = element(by.name("searchStr"));
     }
 
     searchForMovie(movieName){

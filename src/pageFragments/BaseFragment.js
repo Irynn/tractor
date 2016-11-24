@@ -5,8 +5,8 @@
 
 class BaseFragment{
 
-    constructor(browser){
-        this.browser = browser;
+    constructor(){
+       //some useful initializations might be needed here
     }
 }
 

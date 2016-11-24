@@ -6,9 +6,9 @@ var BasePage = rekuire('BasePage');
 var MovieCardsGrid = rekuire('MovieCardsGrid');
 
 class GenrePage extends BasePage {
-    constructor(browser){
-        super(browser);
-        this.movieCardsGrid = new MovieCardsGrid(browser);
+    constructor(){
+        super();
+        this.movieCardsGrid = new MovieCardsGrid();
     }
 }
 

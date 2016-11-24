@@ -7,9 +7,9 @@ var BaseFragment = rekuire('BaseFragment');
 
 class GenresPanel extends BaseFragment {
 
-    constructor(browser){
-        super(browser);
-        this.genresList = this.browser.$$('.list-group-item');
+    constructor(){
+        super();
+        this.genresList = $$('.list-group-item');
     }
 
     selectGenreByName(genreName) {

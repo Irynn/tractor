@@ -6,8 +6,9 @@
 var HomePage = rekuire('HomePage');
 
 class PopularSeriesPage extends HomePage {
-    constructor(browser){
-        super(browser);
+    constructor(){
+        super();
+        //some additional useful initializations
     }
 }
 

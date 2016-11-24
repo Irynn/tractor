@@ -9,11 +9,11 @@ var MovieCardsGrid = rekuire('MovieCardsGrid');
 
 class HomePage extends BasePage {
 
-    constructor(browser){
+    constructor(){
 
-        super(browser);
-        this.searchPanel = new SearchPanel(browser);
-        this.movieCardsGrid = new MovieCardsGrid(browser);
+        super();
+        this.searchPanel = new SearchPanel();
+        this.movieCardsGrid = new MovieCardsGrid();
     }
 
 

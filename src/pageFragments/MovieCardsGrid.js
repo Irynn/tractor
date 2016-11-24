@@ -9,8 +9,7 @@ var BaseFragment = rekuire('BaseFragment');
 class MovieCard extends BaseFragment{
 
     constructor(element){
-        //getting browser of element works only in Protractor 4.0+
-        super(element.browser_);
+        super();
         
         this.baseElement = element;
         this.titleLink = this.baseElement.$('a[title]');
@@ -38,9 +37,9 @@ class MovieCard extends BaseFragment{
 
 class MovieCardsGrid extends BaseFragment{
 
-    constructor(browser){
-        super(browser);
-        this.movieCards = this.browser.$$('movie-card');
+    constructor(){
+        super();
+        this.movieCards = $$('movie-card');
     }
     getMovieCardByIndex(index){
         return new MovieCard(this.movieCards.get(index));

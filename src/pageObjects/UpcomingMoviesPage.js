@@ -6,8 +6,8 @@
 var HomePage = rekuire('HomePage');
 
 class UpcomingMoviesPage extends HomePage {
-        constructor(browser){
-            super(browser);
+        constructor(){
+            super();
         }
 }
 

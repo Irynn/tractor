@@ -8,12 +8,11 @@ var GenresPanel = rekuire('GenresPanel');
 
 class BasePage{
 
+    constructor(){
 
-    constructor(browser){
-        this.browser = browser;
         this.titleSelector = 'h3.orange-text';
-        this.header = new Header(browser);
-        this.genresList = new GenresPanel(browser);
+        this.header = new Header();
+        this.genresList = new GenresPanel();
     }
 
     static openHomePage(){
@@ -22,8 +21,8 @@ class BasePage{
     }
 
     get pageName(){
-        this.browser.wait(EC.visibilityOf(this.browser.$(this.titleSelector)));
-        return this.browser.$$(this.titleSelector).first().getText();
+        browser.wait(EC.visibilityOf($(this.titleSelector)));
+        return $$(this.titleSelector).first().getText();
     }
 }
 
