@@ -10,7 +10,7 @@ class BasePage{
 
     constructor(){
 
-        this.titleSelector = 'h3.orange-text';
+        this.titleSelector = $$('h3.orange-text');
         this.header = new Header();
         this.genresList = new GenresPanel();
     }
@@ -21,8 +21,8 @@ class BasePage{
     }
 
     get pageName(){
-        browser.wait(EC.visibilityOf($(this.titleSelector)));
-        return $$(this.titleSelector).first().getText();
+        browser.wait(EC.visibilityOf(this.titleSelector.first()));
+        return this.titleSelector.first().getText();
     }
 }
 

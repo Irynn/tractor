@@ -34,6 +34,7 @@ exports.config = {
     onPrepare: function () {
         global.browser = browser;
         browser.manage().window().maximize();
+        //adding lib to use require without relative paths
         global.rekuire = require("rekuire");
         global.EC = protractor.ExpectedConditions;
         var customMatchers = require('jasmine-protractor-matchers');
@@ -46,7 +47,7 @@ exports.config = {
         afterEach(function () {
             //Some code that needs to be executed before each test in all specs could be written here.
         });
-        //adding lib to use require without relative paths
+
 
     }
 };
